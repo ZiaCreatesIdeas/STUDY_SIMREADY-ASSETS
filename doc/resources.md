@@ -1,11 +1,13 @@
 
 
 (resources)=
+
 #### Resources
 
-This is a list of helpful tutorials.
+##### Documentation
+This is a list of links.\
+[Nvidia Developer SimReady Blog](https://developer.nvidia.com/blog/building-simulation-ready-usd-3d-assets-in-nvidia-omniverse/)
 
-##### USD Documentation
 
 Open USD Glossary of Terms: 
 **[openusd.org, Terms and Concepts](https://openusd.org/release/glossary.html)**\
@@ -15,15 +17,8 @@ SideFx (Houdini) Definitions:
 
 ---
 
-##### Video Presentations
+##### Videos
 
-SideFX Primer: 
-[What is USD: A Primer | Rob Stauffer | SIGGRAPH 2019](https://youtu.be/Yp_TRVD3wjQ)
+ 
 
----
-
-#### FAQ's and Common Problems
-
-Error: Cannot Nest Gprims: 
-**[Do Not Nest Gprims](https://openusd.org/release/glossary.html#usdglossary-gprim)**
 
