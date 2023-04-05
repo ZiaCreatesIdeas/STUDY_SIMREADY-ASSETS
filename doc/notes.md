@@ -14,15 +14,14 @@
 ![semantic labelling](https://docs.omniverse.nvidia.com/prod_simready/_images/simready_taxonomy.png "Example of Semantic Labelling")
 
 
-```{mermaid}
-flowchart LR
-  A[Jupyter Notebook] --> C
-  B[MyST Markdown] --> C
-  C(mystjs) --> D{AST}
-  D <--> E[LaTeX]
-  E --> F[PDF]
-  D --> G[Word]
-  D --> H[React]
-  D --> I[HTML]
-  D <--> J[JATS]
-```
+**Asset Class -> Asset Family -> Asset Category**
+
+---
+##### Materials
+
+"By following specified SimReady material naming conventions <LINK NEEDED>, there will be tooling to help convert standard OmniPBR and OmniGlass materials into precise SimPBR physical materials that will generate the correct outputs from SimReady objects so that the RTX sensors can respond properly within the simulation." [source](https://docs.omniverse.nvidia.com/prod_simready/prod_simready/sim-needs/sensor-support.html)
+
+
+##### Dimensions
+
+"It’s important to note that all SimReady models adhere to **meter** scale for physics." [ref of Page](https://docs.omniverse.nvidia.com/prod_simready/prod_simready/sim-needs/phys-and-behaviors.html#physics-and-physical-behaviors)

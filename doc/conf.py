@@ -63,7 +63,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'SimReady Assets'
-copyright = '2023.'
+copyright = 'Open'
 author = 'Zia'
 
 # The version info for the project you're documenting, acts as replacement for
