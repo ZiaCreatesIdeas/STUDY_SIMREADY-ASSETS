@@ -4,11 +4,13 @@
    table of contents
 
 
-Template
-========
+Table of Contents
+=================
 
 .. toctree::
    :maxdepth: 2
 
+   notes.md
+   questions.md
    resources.md
    credit.rst

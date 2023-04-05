@@ -62,8 +62,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'USD STUDY'
-copyright = '2023, USD Study Group.'
+project = 'SimReady Assets'
+copyright = '2023.'
 author = 'Zia'
 
 # The version info for the project you're documenting, acts as replacement for
