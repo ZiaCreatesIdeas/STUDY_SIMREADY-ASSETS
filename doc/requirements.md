@@ -206,23 +206,20 @@ This is the *content*
 
 ---
 
-<div style="width: 80%; overflow-x: auto;">
-| Time Code | Description |
-|-----------|-------------|
-| <iframe width="400" height="226" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:14 | Stop the simulation and go back to the beginning. |
+<div style="width: 50%; overflow-x: auto;">
+| Time Code | Description |  
+| 1:14 | Stop the simulation and go back to the beginning. |<iframe width="400" height="226" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>|
 | <iframe width="400" height="226" src="https://www.youtube.com/embed/lFtEMg86lJc?start=76&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:16 | Duplicate one of the objects. |
 </div>
 
 ---
 
-:::{table} This is a **standard** _Markdown_ title
-:align: center
-:widths: grid
+<div style="width: 50%; margin: 0; text-aling: left; overflow-x: auto;">
 
 
 | Time Code | Description |
 |-----------|-------------|
-| <iframe width="400" height="226" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:14 | Stop the simulation and go back to the beginning. |
+| <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:14 | Stop the simulation and go back to the beginning. |
 | <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=76&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:16| Duplicate one of the objects. |
 | <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=77&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | Optionally rotate the duplicated object. |
 | <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=89&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | Press play and observe the stacked objects. |
@@ -233,4 +230,12 @@ This is the *content*
 | <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=120&modestbranding=0&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | These meshes can be for rendering or collision detection. |
 | <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?
 
-:::
+</div>
+
+---
+
+| Time Code | Description |
+|-----------|-------------|
+| <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:14 | Stop the simulation and go back to the beginning. |
+| <iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=76&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:16| Duplicate one of the objects. |
+

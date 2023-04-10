@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9aaf3d54-50ad-4257-b5f7-5feb550bfd38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/doc/conf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/requirements.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/requirements.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/resources.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/resources.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +26,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doc/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="955">
+            <state relative-caret-position="2288">
               <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
             </state>
           </provider>
@@ -83,8 +81,8 @@
         <entry file="file://$PROJECT_DIR$/doc/requirements.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="643">
-                <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
+              <first_editor relative-caret-position="1105">
+                <caret line="238" column="213" lean-forward="true" selection-start-line="238" selection-start-column="2" selection-end-line="238" selection-end-column="213" />
               </first_editor>
               <second_editor />
             </state>
@@ -147,9 +145,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="181" />
-    <option name="y" value="23" />
+    <option name="y" value="25" />
     <option name="width" value="1718" />
     <option name="height" value="1305" />
   </component>
@@ -216,7 +214,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="181" y="23" width="1718" height="1305" extended-state="0" />
+    <frame x="181" y="25" width="1718" height="1305" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15556864" />
@@ -285,10 +283,27 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/doc/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2288">
+          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.github/workflows/documentation.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/resources.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="352">
+            <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -325,28 +340,11 @@
     <entry file="file://$PROJECT_DIR$/doc/credit.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/resources.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="352">
-            <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doc/requirements.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="643">
-            <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
+          <first_editor relative-caret-position="1105">
+            <caret line="238" column="213" lean-forward="true" selection-start-line="238" selection-start-column="2" selection-end-line="238" selection-end-column="213" />
           </first_editor>
           <second_editor />
         </state>
