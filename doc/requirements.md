@@ -35,7 +35,7 @@
 
 ### Common Modeling issues and Recommended Solution
 
-[source](https://docs.omniverse.nvidia.com/prod_simready/prod_simready/simready-asset-creation/modeling-issues.html)
+[Nvidia Simready Documentation](https://docs.omniverse.nvidia.com/prod_simready/prod_simready/simready-asset-creation/modeling-issues.html)
 
 - NGons.  
 
