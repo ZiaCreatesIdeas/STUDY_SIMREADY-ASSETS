@@ -3,7 +3,7 @@
 
 # Requirements
 
-## Workflow
+## Workflow Overview
 **Physical Creation**
 - Gather references.
 - Model
@@ -27,11 +27,19 @@
     * Use USD composition arcs. 
     * Save Geometry to an 'Instance' / Inst file. (27:10) [source](https://www.nvidia.com/gtc/session-catalog/?search=beau&tab.catalogallsessionstab=16566177511100015Kus&search=beau#/session/1674663459922001qgvS)
     * Add Inst file as Reference in new file, not payload.       
-    New File > Preferences Tab > Stage Label > Import > **'Payload' => 'References'**
-    
-    
+    New File > Preferences Tab > Stage Label > Import > **'Payload' => 'References'**  
 
-- SimReady 3D art assets must include rigid-body physics pre-configured by default so that they can be inserted into a scene quickly and immediately interact with other elements. [source](https://docs.omniverse.nvidia.com/prod_simready/prod_simready/sim-needs/phys-and-behaviors.html#physics-and-physical-behaviors)  
+- SimReady 3D art assets must include rigid-body physics pre-configured by default so that they can be inserted into a scene quickly and immediately interact with other elements. [source](https://docs.omniverse.nvidia.com/prod_simready/prod_simready/sim-needs/phys-and-behaviors.
+html#physics-and-physical-behaviors)  
+
+## Workflow Specifics
+
+- Upon importing geometry, ensure root cube is in place.
+- Name root file according to Simready taxonomy. SBD - Soon to be defined.
+- Use transforms to govern any Parent - Child relationship.
+- Remove default lighting?
+- Change to Z - Up coordinate system.
+- Save a new file name as 'sm_xxxx_a01_inst'
 
 ### Common Modeling issues and Recommended Solution
 
