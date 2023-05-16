@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Requirements &mdash; SimReady Assets 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/design-tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Resources" href="resources.html" />
+    <link rel="prev" title="Questions" href="questions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SimReady Assets
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="questions.html">Questions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#workflow-overview">Workflow Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow-specifics">Workflow Specifics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-modeling-issues-and-recommended-solution">Common Modeling issues and Recommended Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentationpullrequests.html">Documentation Pull Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credit.html">Credit and inspiration</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SimReady Assets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Requirements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/requirements.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="requirements">
+<h1>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h1>
+<section id="workflow-overview">
+<h2>Workflow Overview<a class="headerlink" href="#workflow-overview" title="Permalink to this heading"></a></h2>
+<p><strong>Physical Creation</strong></p>
+<ul class="simple">
+<li><p>Gather references.</p></li>
+<li><p>Model</p>
+<ul>
+<li><p>Chamfers / Bevels</p></li>
+<li><p>Ngons &lt;= 4, triangles are ok</p></li>
+</ul>
+</li>
+<li><p>Texture</p>
+<ul>
+<li><p>UV’s may need to follow grain</p></li>
+<li><p>Materials should include wear.</p></li>
+</ul>
+</li>
+<li><p>Naming</p>
+<ul>
+<li><p>Each object follows naming convention</p></li>
+</ul>
+</li>
+<li><p>Rigging</p>
+<ul>
+<li><p>Create Dummy Object to parent Prims to.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Sim Preparation</strong></p>
+<ul class="simple">
+<li><p>Check Assembly</p>
+<ul>
+<li><p>Avoid nested Gprims, no direct parenting of assets.</p></li>
+<li><p>Material Naming (3 part core naming convention)</p></li>
+<li><p>Ensure ‘Z’ up orientation.</p></li>
+</ul>
+</li>
+<li><p>Conform file names and types to be Synthetic Generator Friendly</p>
+<ul>
+<li><p>Use USD composition arcs.</p></li>
+<li><p>Save Geometry to an ‘Instance’ / Inst file. (27:10) <a class="reference external" href="https://www.nvidia.com/gtc/session-catalog/?search=beau&amp;amp;tab.catalogallsessionstab=16566177511100015Kus&amp;amp;search=beau#/session/1674663459922001qgvS">source</a></p></li>
+<li><p>Add Inst file as Reference in new file, not payload.<br />
+New File &gt; Preferences Tab &gt; Stage Label &gt; Import &gt; <strong>‘Payload’ =&gt; ‘References’</strong></p></li>
+</ul>
+</li>
+<li><p>SimReady 3D art assets must include rigid-body physics pre-configured by default so that they can be inserted into a scene quickly and immediately interact with other elements. [source](https://docs.omniverse.nvidia.com/prod_simready/prod_simready/sim-needs/phys-and-behaviors.
+html#physics-and-physical-behaviors)</p></li>
+</ul>
+</section>
+<section id="workflow-specifics">
+<h2>Workflow Specifics<a class="headerlink" href="#workflow-specifics" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Upon importing geometry, ensure root cube is in place.</p></li>
+<li><p>Name root file according to Simready taxonomy. SBD - Soon to be defined.</p></li>
+<li><p>Use transforms to govern any Parent - Child relationship.</p></li>
+<li><p>Remove default lighting?</p></li>
+<li><p>Change to Z - Up coordinate system.</p></li>
+<li><p>Save a new file name as ‘sm_xxxx_a01_inst’</p></li>
+</ul>
+<section id="common-modeling-issues-and-recommended-solution">
+<h3>Common Modeling issues and Recommended Solution<a class="headerlink" href="#common-modeling-issues-and-recommended-solution" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="https://docs.omniverse.nvidia.com/prod_simready/prod_simready/simready-asset-creation/modeling-issues.html">Nvidia Simready Documentation</a></p>
+<ul class="simple">
+<li><p>NGons.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This text is <strong>standard</strong> <em>Markdown</em></p>
+</div>
+</div>
+<div class="admonition note" name="html-admonition" style="background: lightgreen; padding: 10px">
+<p class="title">This is the **title**</p>
+This is the *content*
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time</p></th>
+<th class="head"><p>Information</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0:00</p></td>
+<td><p>Learn to use Simready assets by focusing on the with physics.usd file which has all necessary physics attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0:22</p></td>
+<td><p>To work with the assets in the physics scene, set one meter as one unit and use 9.8 gravity. Add the with physics dot USD file by dragging it in.</p></td>
+</tr>
+<tr class="row-even"><td><p>0:46</p></td>
+<td><p>Dragging the file in brings in a payload, instancing a reference and a physics material. Press play to get physics and shift+drag to move objects around.</p></td>
+</tr>
+<tr class="row-odd"><td><p>1:19</p></td>
+<td><p>Simready assets come with all necessary elements pre-canned. Each asset has a main transform with meshes that can be for render or collision messages.</p></td>
+</tr>
+<tr class="row-even"><td><p>2:00</p></td>
+<td><p>The main transform has rigid body properties that can be enabled or disabled, and linear and angular velocity can be added. Keep masses and densities to Auto compute to consider the physics material.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2:41</p></td>
+<td><p>Each mesh has collider properties that can be enabled or disabled. To view the object colliding with the collider, go to the eyeball and select physics, then colliders, and show all.</p></td>
+</tr>
+<tr class="row-even"><td><p>3:18</p></td>
+<td><p>Sim-ready assets usually have efficient colliders set up, but if needed, go to approximation to adjust options for efficiency.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Sentences</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0:00</p></td>
+<td><p>Hey everybody here’s a quick tutorial on how to use simrani assets.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0:05</p></td>
+<td><p>When you go into a Sim ready folder, you’re going to see numerous files.</p></td>
+</tr>
+<tr class="row-even"><td><p>0:08</p></td>
+<td><p>We’re going to focus on the with physics.usd file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0:10</p></td>
+<td><p>The with physics.usd file is everything needed to simulate this asset with rigid bodies.</p></td>
+</tr>
+<tr class="row-even"><td><p>0:19</p></td>
+<td><p>The file is only the physics attributes referencing the inst file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0:22</p></td>
+<td><p>I started this scene just by doing new from stage template and bringing the abandoned parking lot, and then I also added a physics scene.</p></td>
+</tr>
+<tr class="row-even"><td><p>0:30</p></td>
+<td><p>This is very important because based on what unit you’re working in and right now we’re going to work in one meter is one unit, and that’s how all simulator assets are going to be processed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0:43</p></td>
+<td><p>So our gravity is going to actually be 9.8.</p></td>
+</tr>
+<tr class="row-even"><td><p>0:46</p></td>
+<td><p>Now I’m going to drag in my with physics dot USD.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0:57</p></td>
+<td><p>When you look at this, we have a payload and we’re instancing a referencing, sorry, the inst file, and we have a physics material.</p></td>
+</tr>
+<tr class="row-even"><td><p>1:06</p></td>
+<td><p>Put this anywhere and press the play button.</p></td>
+</tr>
+<tr class="row-odd"><td><p>1:09</p></td>
+<td><p>Now we get physics, we can also hit shift and drag these around.</p></td>
+</tr>
+<tr class="row-even"><td><p>1:19</p></td>
+<td><p>Maybe I want to duplicate this one.</p></td>
+</tr>
+<tr class="row-odd"><td><p>1:29</p></td>
+<td><p>And press play and now we got these guys stacking pretty nicely.</p></td>
+</tr>
+<tr class="row-even"><td><p>1:38</p></td>
+<td><p>The simrani assets are going to come already pre-canned with any of this stuff.</p></td>
+</tr>
+<tr class="row-odd"><td><p>1:40</p></td>
+<td><p>Let’s get into a little bit about how the asset is organized.</p></td>
+</tr>
+<tr class="row-even"><td><p>1:48</p></td>
+<td><p>Like I said before, we have a payload and then we have a reference to the model, and then inside there we’re going to have one main transform always, and underneath there we’ll have our meshes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2:03</p></td>
+<td><p>So all of our rigid body properties are going to be on this main transform.</p></td>
+</tr>
+<tr class="row-even"><td><p>2:10</p></td>
+<td><p>When we look in the property editor we should see rigid body and then here you can disable or enable it, you can also check this if you want to keyframe it, okay, and if you want to add some linear velocity this is initial lineography and initial angular velocity can do from here.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2:33</p></td>
+<td><p>Usually you’re not going to mess with a whole lot in this area.</p></td>
+</tr>
+<tr class="row-even"><td><p>2:36</p></td>
+<td><p>We want to keep our masses and densities and everything to Auto compute because it’s going to take in account the physics material.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2:45</p></td>
+<td><p>Each mesh is actually going to have the Collision the collider properties.</p></td>
+</tr>
+<tr class="row-even"><td><p>2:52</p></td>
+<td><p>If you want to see how this object with the Collision object is for this, you’re going to go to this eyeball here, you’re going to show type down in physics, you can see colliders and we’re going to show all.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3:04</p></td>
+<td><p>Now you can see we got this pink wireframe.</p></td>
+</tr>
+<tr class="row-even"><td><p>3:09</p></td>
+<td><p>We want to make these as efficient as possible so we get some options down in the Collider.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3:16</p></td>
+<td><p>Usually a Sim ready asset is going to already have this stuff set up, but if you wanted to come in here and make something even</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Sentences</p></th>
+<th class="head"><p>YouTube Link with Start Time</p></th>
+<th class="head"><p>Link as Markdown Code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2:52</p></td>
+<td><p>If you want to see how this object with the Collision object is for this, you’re going to go to this eyeball here, you’re going to show type down in physics, you can see colliders and we’re going to show all.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=172</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=172">Link</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:04</p></td>
+<td><p>Now you can see we got this pink wireframe.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=184</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[Link](https://youtu.be/lFtEMg86lJc?t=184)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>3:09</p></td>
+<td><p>We want to make these as efficient as possible so we get some options down in the Collider.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=189</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[Link](https://youtu.be/lFtEMg86lJc?t=189)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:16</p></td>
+<td><p>Usually a Sim ready asset is going to already have this stuff set up, but if you wanted to come in here and make something even</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=196</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[Link](https://youtu.be/lFtEMg86lJc?t=196)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Sentences</p></th>
+<th class="head"><p>YouTube Link with Start Time</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2:52</p></td>
+<td><p>If you want to see how this object with the Collision object is for this, you’re going to go to this eyeball…</p></td>
+<td><p><a class="reference internal" href="#172"><span class="xref myst">https://youtu.be/lFtEMg86lJc?t=172</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:04</p></td>
+<td><p>Now you can see we got this pink wireframe.</p></td>
+<td><p><a class="reference internal" href="#184"><span class="xref myst">https://youtu.be/lFtEMg86lJc?t=184</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>3:09</p></td>
+<td><p>We want to make these as efficient as possible so we get some options down in the Collider.</p></td>
+<td><p><a class="reference internal" href="#189"><span class="xref myst">https://youtu.be/lFtEMg86lJc?t=189</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:16</p></td>
+<td><p>Usually a Sim ready asset is going to already have this stuff set up, but if you wanted to come in here an…</p></td>
+<td><p><a class="reference internal" href="#196"><span class="xref myst">https://youtu.be/lFtEMg86lJc?t=196</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Sentences</p></th>
+<th class="head"><p>YouTube Link with Start Time</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2:52</p></td>
+<td><p>If you want to see how this object with the Collision object is for this, you’re going to go to this eyeball here, you’re going to show type down in physics, you can see colliders and we’re going to show all.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=172">Link</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:04</p></td>
+<td><p>Now you can see we got this pink wireframe.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=184">Link</a></p></td>
+</tr>
+<tr class="row-even"><td><p>3:09</p></td>
+<td><p>We want to make these as efficient as possible so we get some options down in the Collider.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=189">Link</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:16</p></td>
+<td><p>Usually a Sim ready asset is going to already have this stuff set up, but if you wanted to come in here and make something even</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=196">Link</a></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Sentences</p></th>
+<th class="head"><p>Video</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2:52</p></td>
+<td><p>If you want to see how this object with the Collision object is for this, you’re going to go to this eyeball here, you’re going to show type down in physics, you can see colliders and we’re going to show all.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=172">2:52</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:04</p></td>
+<td><p>Now you can see we got this pink wireframe.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=184">3:04</a></p></td>
+</tr>
+<tr class="row-even"><td><p>3:09</p></td>
+<td><p>We want to make these as efficient as possible so we get some options down in the Collider.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=189">3:09</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3:16</p></td>
+<td><p>Usually a Sim ready asset is going to already have this stuff set up, but if you wanted to come in here and make something even</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=196">3:16</a></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Information</p></th>
+<th class="head"><p>Video Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5:08</p></td>
+<td><p>Importance of scaling objects and adjusting the density attribute when working with rigid bodies in a physics engine is noted.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=308</p></td>
+</tr>
+<tr class="row-odd"><td><p>5:13</p></td>
+<td><p>Density attribute is mentioned as determining masses, which are essential when working with rigid bodies.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=313</p></td>
+</tr>
+<tr class="row-even"><td><p>5:21</p></td>
+<td><p>Suggestion to have a physics asset in each folder to define an object’s physical properties.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=321</p></td>
+</tr>
+<tr class="row-odd"><td><p>5:29</p></td>
+<td><p>The speaker drags the physics asset into the folder.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=329</p></td>
+</tr>
+<tr class="row-even"><td><p>5:39</p></td>
+<td><p>Other tutorials are suggested to learn about additional features that come with physics assets, such as semantic labeling.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=339</p></td>
+</tr>
+<tr class="row-odd"><td><p>5:46</p></td>
+<td><p>The speaker thanks the audience for watching.</p></td>
+<td><p>https://youtu.be/lFtEMg86lJc?t=346</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Information</p></th>
+<th class="head"><p>Video Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5:08</p></td>
+<td><p>Importance of scaling objects and adjusting the density attribute when working with rigid bodies in a physics engine is noted.</p></td>
+<td><p><img alt="5:08" src="https://youtu.be/lFtEMg86lJc?t=308" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:13</p></td>
+<td><p>Density attribute is mentioned as determining masses, which are essential when working with rigid bodies.</p></td>
+<td><p><img alt="5:13" src="https://youtu.be/lFtEMg86lJc?t=313" /></p></td>
+</tr>
+<tr class="row-even"><td><p>5:21</p></td>
+<td><p>Suggestion to have a physics asset in each folder to define an object’s physical properties.</p></td>
+<td><p><img alt="5:21" src="https://youtu.be/lFtEMg86lJc?t=321" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:29</p></td>
+<td><p>The speaker drags the physics asset into the folder.</p></td>
+<td><p><img alt="5:29" src="https://youtu.be/lFtEMg86lJc?t=329" /></p></td>
+</tr>
+<tr class="row-even"><td><p>5:39</p></td>
+<td><p>Other tutorials are suggested to learn about additional features that come with physics assets, such as semantic labeling.</p></td>
+<td><p><img alt="5:39" src="https://youtu.be/lFtEMg86lJc?t=339" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:46</p></td>
+<td><p>The speaker thanks the audience for watching.</p></td>
+<td><p><img alt="5:46" src="https://youtu.be/lFtEMg86lJc?t=346" /></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Information</p></th>
+<th class="head"><p>Video Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5:08</p></td>
+<td><p>Importance of scaling objects and adjusting the density attribute when working with rigid bodies in a physics engine is noted.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=308">5:08</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:13</p></td>
+<td><p>Density attribute is mentioned as determining masses, which are essential when working with rigid bodies.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=313">5:13</a></p></td>
+</tr>
+<tr class="row-even"><td><p>5:21</p></td>
+<td><p>Suggestion to have a physics asset in each folder to define an object’s physical properties.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=321">5:21</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:29</p></td>
+<td><p>The speaker drags the physics asset into the folder.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=329">5:29</a></p></td>
+</tr>
+<tr class="row-even"><td><p>5:39</p></td>
+<td><p>Other tutorials are suggested to learn about additional features that come with physics assets, such as semantic labeling.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=339">5:39</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:46</p></td>
+<td><p>The speaker thanks the audience for watching.</p></td>
+<td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=346">5:46</a></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Information</p></th>
+<th class="head"><p>Video Link</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5:08</p></td>
+<td><p>If you scale these objects and work in different units, you’re going to have to scale this density attribute because</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>it’s determining your masses and we’re looking at the rigid bodies. Obviously, your masses are super important, right?</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=lFtEMg86lJc&amp;amp;t=5m8s"><img alt="5:08" src="https://img.youtube.com/vi/lFtEMg86lJc/0.jpg" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p>5:21</p></td>
+<td><p>So again, any of these folders, we should have a physics asset.</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=lFtEMg86lJc&amp;amp;t=5m21s"><img alt="5:21" src="https://img.youtube.com/vi/lFtEMg86lJc/1.jpg" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:29</p></td>
+<td><p>And here, drag this in.</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=lFtEMg86lJc&amp;amp;t=5m29s"><img alt="5:29" src="https://img.youtube.com/vi/lFtEMg86lJc/2.jpg" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p>5:39</p></td>
+<td><p>They should already pre-cam and look at some other tutorials for some of the other things that come with similarity acids, like semantic labeling.</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=lFtEMg86lJc&amp;amp;t=5m39s"><img alt="5:39" src="https://img.youtube.com/vi/lFtEMg86lJc/3.jpg" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>5:46</p></td>
+<td><p>Thank you for watching.</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=lFtEMg86lJc&amp;amp;t=5m46s"><img alt="5:46" src="https://img.youtube.com/vi/lFtEMg86lJc/4.jpg" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><a class="reference external" href="https://www.youtube.com/watch?v=lFtEMg86lJc&amp;amp;t=0m34s"><img alt="5:29" src="https://img.youtube.com/vi/lFtEMg86lJc/2.jpg" /></a> |</p>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Information</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=0s">0:00</a></p></td>
+<td><p>Open a Sim ready folder and locate the with physics.usd file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=22s">0:22</a></p></td>
+<td><p>Create a new scene using the abandoned parking lot template and add a physics scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=30s">0:30</a></p></td>
+<td><p>Set the unit system to one meter per unit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=46s">0:46</a></p></td>
+<td><p>Drag the with physics.usd file into the scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=54s">0:54</a></p></td>
+<td><p>Check that the payload and inst file are referencing properly and that a physics material is present.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=1m6s">1:06</a></p></td>
+<td><p>Press the play button to enable physics simulation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://youtu.be/lFtEMg86lJc?t=1m9s">1:09</a></p></td>
+<td><p>Use the shift key to drag and move objects around in the simulation.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="0:00" src="https://img.youtube.com/vi/lFtEMg86lJc/0.jpg" /></p></td>
+<td><p>Introduction</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="1:14" src="https://img.youtube.com/vi/lFtEMg86lJc/1.jpg" /></p></td>
+<td><p>Stop the simulation and go back to the beginning.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="1:16" src="https://img.youtube.com/vi/lFtEMg86lJc/2.jpg" /></p></td>
+<td><p>Duplicate one of the objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="1:17" src="https://img.youtube.com/vi/lFtEMg86lJc/3.jpg" /></p></td>
+<td><p>Optionally rotate the duplicated object.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="1:19" src="https://img.youtube.com/vi/lFtEMg86lJc/4.jpg" /></p></td>
+<td><p>Press play and observe the stacked objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="1:29" src="https://img.youtube.com/vi/lFtEMg86lJc/5.jpg" /></p></td>
+<td><p>Manipulate the stacked objects as desired.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="1:38" src="https://img.youtube.com/vi/lFtEMg86lJc/6.jpg" /></p></td>
+<td><p>Simready assets come pre-packaged with these features.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="1:43" src="https://img.youtube.com/vi/lFtEMg86lJc/7.jpg" /></p></td>
+<td><p>Simready assets are organized with a payload and a reference to the model.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="1:54" src="https://img.youtube.com/vi/lFtEMg86lJc/8.jpg" /></p></td>
+<td><p>Inside, there is always one main transform, underneath which are the meshes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="2:00" src="https://img.youtube.com/vi/lFtEMg86lJc/9.jpg" /></p></td>
+<td><p>These meshes can be for rendering or collision detection.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="2:06" src="https://img.youtube.com/vi/lFtEMg86lJc/10.jpg" /></p></td>
+<td><p>Rigid body properties are located on the main transform.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div style="width: 50%; overflow-x: auto;">
+| Time Code | Description |  
+| 1:14 | Stop the simulation and go back to the beginning. |<iframe width="400" height="226" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>|
+| <iframe width="400" height="226" src="https://www.youtube.com/embed/lFtEMg86lJc?start=76&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:16 | Duplicate one of the objects. |
+</div>
+<hr class="docutils" />
+<div style="width: 50%; margin: 0; text-aling: left; overflow-x: auto;">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:14</p></td>
+<td><p>Stop the simulation and go back to the beginning.</p></td>
+</tr>
+<tr class="row-odd"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=76&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:16</p></td>
+<td><p>Duplicate one of the objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=77&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p></td>
+<td><p>Optionally rotate the duplicated object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=89&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p></td>
+<td><p>Press play and observe the stacked objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=92&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p></td>
+<td><p>Manipulate the stacked objects as desired.</p></td>
+</tr>
+<tr class="row-odd"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=98&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p></td>
+<td><p>Simready assets come pre-packaged with these features.</p></td>
+</tr>
+<tr class="row-even"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=103&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p></td>
+<td><p>Simready assets are organized with a payload and a reference to the model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=114&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p></td>
+<td><p>Inside, there is always one main transform, underneath which are the meshes.</p></td>
+</tr>
+<tr class="row-even"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=120&modestbranding=0&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p></td>
+<td><p>These meshes can be for rendering or collision detection.</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;iframe width=”200” height=”113” src=”https://www.youtube.com/embed/lFtEMg86lJc?</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=74&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:14</p></td>
+<td><p>Stop the simulation and go back to the beginning.</p></td>
+</tr>
+<tr class="row-odd"><td><p><iframe width="200" height="113" src="https://www.youtube.com/embed/lFtEMg86lJc?start=76&modestbranding=1&rel=0" title="Simready video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 1:16</p></td>
+<td><p>Duplicate one of the objects.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="questions.html" class="btn btn-neutral float-left" title="Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="resources.html" class="btn btn-neutral float-right" title="Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Open.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
